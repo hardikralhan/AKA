@@ -220,14 +220,14 @@ export default function Gallary() {
   return (
     <>
     <div className={model? "model open": "model"}>
-        <img src= {tempimgSrc} />
+        <img alt='image' src= {tempimgSrc} />
         <CloseIcon onClick={()=> setModel(false)}/>
     </div>
         <div className='gallery'>
             {data.map((item,index)=>{
                 return(
                     <div className='pics' key={index} onClick={() => getImg(item.imgSrc)}>
-                    <img src ={item.imgSrc} style={{width: '100%'}}/>
+                    <img alt="image" src ={item.imgSrc} style={{width: '100%'}}/>
                     </div>
                 )
             })}
